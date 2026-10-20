@@ -4,7 +4,6 @@
     <application
         android:label="MT论坛"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
         android:allowBackup="true"
         android:supportsRtl="true">
         <activity
