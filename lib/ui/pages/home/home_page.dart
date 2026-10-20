@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -189,7 +190,7 @@ class _LiquidBottomNav extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(28),
         child: BackdropFilter(
-          filter: const ColorFilter.mode(Colors.transparent, BlendMode.srcOver) as dynamic,
+          filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
           child: Row(
             children: [
               _NavItem(icon: Icons.forum_rounded, label: '版块', selected: selected == 0, onTap: () => onChanged(0)),
